@@ -351,3 +351,222 @@ footer a {
 .cta-button:hover {
   background-color: #0056b3;
 }
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f4f4f4;
+}
+
+header img {
+  max-height: 80px;
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #ff6f00;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff8f00;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  text-align: center;
+}
+
+.newsletter form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.newsletter input {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.newsletter button {
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #0056b3;
+}
+
+/* Adventure Grid */
+.adventure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+      "desc image1"
+      "desc2 image2";
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.description {
+  grid-area: desc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-1 {
+  grid-area: image1;
+}
+
+.description-2 {
+  grid-area: desc2;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.image-2 {
+  grid-area: image2;
+}
+
+.adventure-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.description-2 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.description-2 li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.description-2 li:last-child {
+  border-bottom: none;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .adventure-grid {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+          "desc"
+          "image1"
+          "desc2"
+          "image2";
+  }
+
+  header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  header nav {
+      margin-top: 1rem;
+  }
+}
